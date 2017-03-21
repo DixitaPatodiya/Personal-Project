@@ -1,7 +1,8 @@
+
 public class A
 {
-  int a;
-  int b;
+  private int a;
+  private int b;
   public void draw(){
   }
 }
