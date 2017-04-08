@@ -32,7 +32,12 @@ public class Java2UMLParser {
 	private static File folder = null;//new File(filePath+"/"+"testcase5");
 	private static File[] listOfFiles = null;//folder.listFiles();
 	private StringBuilder bodyURL = new StringBuilder(); */
-	
+ParseClassPlant parseClassPlant1 = new ParseClassPlant();
+			String expressionFormat = null;
+			String dir = "F:/SampleTestCases/";
+			String dire = "C:/Users/Dixita/workspace/UMLParser/javaparser/src/";
+			File directory = new File(args[0]);
+			File[] files = directory.listFiles();	
 	
 
 }
