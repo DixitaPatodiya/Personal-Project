@@ -28,9 +28,11 @@ import com.github.javaparser.ast.type.ReferenceType;
 import com.github.javaparser.ast.type.VoidType;
 
 public class Java2UMLParser {
-private static String filePath = null;// "D:/projects/UMLJavaParser/src/javaparser";
+/*private static String filePath = null;// "D:/projects/UMLJavaParser/src/javaparser";
 	private static File folder = null;//new File(filePath+"/"+"testcase5");
 	private static File[] listOfFiles = null;//folder.listFiles();
-	private StringBuilder bodyURL = new StringBuilder();
+	private StringBuilder bodyURL = new StringBuilder(); */
+	
+	
 
 }
