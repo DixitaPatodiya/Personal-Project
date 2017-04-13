@@ -39,5 +39,18 @@ ParseClassPlant parseClassPlant1 = new ParseClassPlant();
 			File directory = new File(args[0]);
 			File[] files = directory.listFiles();	
 	
+	for (File fileLoop : files) {
+				System.out.println(fileLoop.getName());
+				if (fileLoop.isFile() && fileLoop.getName().endsWith(".java")) {
+
+					cu = parseSourceCode.parseCode(args[0] + fileLoop.getName());
+					// cu =
+					// parseSourceCode.parseCode("F:/SampleTestCases/Component.java");
+					ParseClass parseClass = new ParseClass();
+					parseClass.visit(cu, null);
+					System.out.println(expressionFormat += parseClass.getExpressionformat());
+				}
+			}
+	
 
 }
