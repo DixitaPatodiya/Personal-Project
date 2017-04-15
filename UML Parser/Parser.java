@@ -31,7 +31,7 @@ public class Java2UMLParser {
 
 ParseClassPlant parseClassPlant1 = new ParseClassPlant();
 			String expressionFormat = null;
-			String dir = "F:/SampleTestCases/";
+			String dir = "D:/SampleTestCases/";
 			String dire = "C:/Users/Dixita/workspace/UMLParser/javaparser/src/";
 			File directory = new File(args[0]);
 			File[] files = directory.listFiles();	
@@ -47,7 +47,7 @@ ParseClassPlant parseClassPlant1 = new ParseClassPlant();
 					parseClass.visit(cu, null);
 					System.out.println(expressionFormat += parseClass.getExpressionformat());
 				}
-			}
+			}  
 	
 
 }
