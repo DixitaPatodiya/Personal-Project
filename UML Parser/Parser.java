@@ -27,27 +27,30 @@ import com.github.javaparser.ast.type.PrimitiveType;
 import com.github.javaparser.ast.type.ReferenceType;
 import com.github.javaparser.ast.type.VoidType;
 
-public class Java2UMLParser {
 
-ParseClassPlant parseClassPlant1 = new ParseClassPlant();
-			String expressionFormat = null;
-			String dir = "D:/SampleTestCases/";
-			String dire = "C:/Users/Dixita/workspace/UMLParser/javaparser/src/";
-			File directory = new File(args[0]);
-			File[] files = directory.listFiles();	
 	
-	for (File fileLoop : files) {
-				System.out.println(fileLoop.getName());
-				if (fileLoop.isFile() && fileLoop.getName().endsWith(".java")) {
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
-					cu = parseSourceCode.parseCode(args[0] + fileLoop.getName());
-					// cu =
-					// parseSourceCode.parseCode("F:/SampleTestCases/Component.java");
-					ParseClass parseClass = new ParseClass();
-					parseClass.visit(cu, null);
-					System.out.println(expressionFormat += parseClass.getExpressionformat());
-				}
-			}  
-	
+import com.github.javaparser.JavaParser;
+import com.github.javaparser.ParseException;
+import com.github.javaparser.ast.CompilationUnit;
+
+public class ParseSourceCode {
+
+	public CompilationUnit parseCode(String filename) throws ParseException, IOException  {
+		FileInputStream in = null;
+		CompilationUnit cu = null;
+		try{
+				in = new FileInputStream(filename);
+				cu = JavaParser.parse(in);
+		}catch (FileNotFoundException e){
+			e.printStackTrace();
+		}finally{
+			in.close();
+		}
+		return cu;
+	}
 
 }
