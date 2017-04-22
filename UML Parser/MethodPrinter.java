@@ -5,7 +5,8 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.visitor.VoidVisitorAdapter;
 
-public class MethodPrinter {
+/*
+   public class MethodPrinter {
 
     public static void main(String[] args) throws Exception {
         // creates an input stream for the file to be parsed
