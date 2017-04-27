@@ -39,7 +39,7 @@ import com.github.javaparser.ast.CompilationUnit;
 
 public class ParseSourceCode {
 
-	public CompilationUnit parseCode(String filename) throws ParseException, IOException  {
+	/*public CompilationUnit parseCode(String filename) throws ParseException, IOException  {
 		FileInputStream in = null;
 		CompilationUnit cu = null;
 		try{
@@ -51,6 +51,6 @@ public class ParseSourceCode {
 			in.close();
 		}
 		return cu;
-	}
+	}*/
 
 }
